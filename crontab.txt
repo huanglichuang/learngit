@@ -1,0 +1,3 @@
+30 21 * * * cd /home/data/shell && sh /home/data/shell/GetDataWithDay.sh >a.log
+
+mysql --local-infile -h rm-bp1u81ft5yi82i842.mysql.rds.aliyuncs.com -uroot -pBigdatadb@098 dmp -e "load data local infile '/home/data/data/table/zj_device.csv' into table zj_device fields terminated by '\\t' lines terminated by '\r'"

@@ -1,0 +1,1 @@
+sh sqoop import -D -D sqoop.hbase.add.row.key=tru=true --connect jdbc:mysql://://rm-bp1u81ft5yi82i842.mysql.rds.aliyuncs.com:3306/dmp --u --username root --password Bigdatadb@098 --table zj_user --where 'unionid != NULL' --columns uid,nickname,sex,headimgurl,province,city --hbase-create-table --hbase-table t_user_info --column-family base_info --hbase-row-key unionid  -m 1
